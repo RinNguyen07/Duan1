@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        background: linear-gradient(to bottom, #6a11cb, #2575fc);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?ixlib=rb-4.0.3");
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(89, 0, 255, 0.6);
+      }
+
+      .login-container {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        width: 100%;
+        max-width: 400px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .login-container h2 {
+        color: white;
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group input {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 25px;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        font-size: 1rem;
+      }
+
+      .form-group input::placeholder {
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .remember-forgot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        color: white;
+      }
+
+      .login-btn {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 25px;
+        background: white;
+        color: #6a11cb;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-bottom: 1rem;
+      }
+
+      .register-link {
+        text-align: center;
+        color: white;
+      }
+
+      .register-link a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Login</h2>
+      <form onsubmit="event.preventDefault(); login();">
+        <div class="form-group">
+          <input type="text" id="username" placeholder="Username" />
+        </div>
+        <div class="form-group">
+          <input type="password" id="password" placeholder="Password" />
+        </div>
+        <div class="remember-forgot">
+          <label><input type="checkbox" /> Remember me</label>
+          <a href="#" style="color: white; text-decoration: none"
+            >Forgot Password?</a
+          >
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+        <div class="register-link">
+          Don't have an account? <a href="#">Register</a>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function login() {
+        const username = document.querySelector("#username").value;
+        const password = document.querySelector("#password").value;
+
+        const accounts = {
+          Khang: "A1",
+          Truong: "A1",
+        };
+
+        if (accounts[username] && accounts[username] === password) {
+          alert("Chào mừng đến với web của " + username);
+          window.location.href = username + ".html";
+        } else {
+          alert("Tài khoản hoặc mật khẩu không đúng!");
+        }
+      }
+    </script>
+  </body>
+</html>

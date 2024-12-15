@@ -1,0 +1,78 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: url(./nen.jpeg);
+    display: block;
+
+}
+
+.menu {
+    background-color: rgba(137, 43, 226, 0.878);
+    padding: 20px 50px;
+    display: flex;  /* trình bày ngang */
+}
+
+#login {
+    margin-top: 10px;
+    font-size: 30px;
+    text-decoration: none;
+    color: whitesmoke;
+
+}
+
+#login:hover{
+    text-shadow: 0 0 5px violet, 0 0 10px violet,0 0 15px violet,0 0 20px violet,0 0 25px violet,0 0 30px violet, 0 0 35px violet;
+}
+
+#ten {
+    padding-left: 390px;
+    font-size: 40px;
+}
+
+.gioithieu {
+    margin-left: 150px;
+    font-size: 30px;
+    margin-top: 280px;
+    color: whitesmoke;
+    display: flex;
+}
+
+.vien {
+    
+    border-style: solid;
+    border-radius: 50px/100px;
+    text-align: center;
+    font-size: 40px;
+    margin-left: 250px;
+    background-color: rgba(255,255,255,0.5);
+    border-color:whitesmoke;
+    border-width:5px;
+    width: 300px;
+    margin-top: 30px;
+    background-image: linear-gradient(to right bottom, #ffa600b8, #ff6bceb4);
+}
+
+#timhieu {
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+}
+
+#timhieu:hover{
+    text-shadow: 0 0 5px #FFFF00, 0 0 10px #FFFF00,0 0 15px #FFFF00,0 0 20px #FFFF00,0 0 25px #FFFF00,0 0 30px #FFFF00;
+}  
+
+.anh {
+    margin-left: 1000px;
+    margin-top: -450px;
+}
+
+#hoanhao {
+    text-align: center;
+}
+
+#nd {
+    padding-top: -10px;
+}
